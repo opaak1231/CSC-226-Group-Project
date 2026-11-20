@@ -1,0 +1,14 @@
+body{
+    background-color: #0091ea;
+}
+
+.clock{
+    display: flex;
+    font-size: 4rem;
+    text-shadow: .25rem .25rem .6rem rgba(255, 255, 255, .1);
+    justify-content: center;
+    text-align: center;
+    color: white;
+    gap: 1.5rem;
+    font-variant-numeric: tabular-nums; /* Font should equalize the size of all numbers -Yannis */
+}
