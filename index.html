@@ -3,11 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TaskQuest | Features Preview</title>
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="./css/siwastyle.css">
+    <link rel="stylesheet" href="./css/features.css">
+    <link rel="stylesheet" href="./css/how-it-works.css">
+    <link rel="stylesheet" href="./css/events.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+    <script src="./js/event-preview.js" defer></script>
 </head>
+
 <body>
-    
-    <script src="main.js"></script>
+    <header class="navbar">
+        <a class="brand" href="./features-preview.html">
+            <span class="logo">✦</span>TaskQuest</a>
+
+        <button id="themeToggle" type="button">Theme: System</button>
+    </header>
+
+    <main class="tq-preview-main">
+
+        <!-- FEATURES SECTION -->
+        <section id="features" class="tq-section">
+            <div class="tq-section-heading">
+                <span class="tq-section-label">FEATURES</span>
+                <h2>Everything you need to level up.</h2>
+
+                <p>
+                    One workspace for your real life
+                    and virtual adventures.
+                </p>
+            </div>
+
+            <div class="tq-features-grid">
+
+                <!-- Feature 1 -->
+                <article class="tq-feature-card">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="list-checks"></i>
+                    </div>
+
+                    <h3>Smart Task Management</h3>
+
+                    <p>
+                        Organize daily tasks, set priorities, create recurring quests, and stay on top of deadlines.
+                    </p>
+
+                </article>
+
+                <!-- Feature 2 -->
+                <article class="tq-feature-card">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+
+                    <h3>Game Event Tracker</h3>
+                    <p>
+                        Track limited-time game events, completion requirements, countdowns, and missed rewards.
+                    </p>
+
+                </article>
+
+                <!-- Feature 3 -->
+                <article class="tq-feature-card">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="calendar-days"></i>
+                    </div>
+
+                    <h3>Calendar & Schedule</h3>
+
+                    <p>
+                        Manage your classes, work, daily quests, and game events in one organized calendar.
+                    </p>
+
+                </article>
+
+                <!-- Feature 4 -->
+                <article class="tq-feature-card">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="trophy"></i>
+                    </div>
+
+                    <h3>Custom Rewards</h3>
+
+                    <p>
+                        Create your own reward system and turn completed tasks into meaningful achievements.
+                    </p>
+
+                </article>
+
+                <!-- Feature 5 -->
+                <article class="tq-feature-card">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="chart-no-axes-column-increasing"></i>
+                    </div>
+
+                    <h3>Level Up Your Progress</h3>
+
+                    <p>
+                        Earn XP and Gold, customize your level progression, and celebrate every achievement.
+                    </p>
+
+                </article>
+
+                <!-- Feature 6 -->
+                <article class="tq-feature-card">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+
+                    <h3>Make It Yours</h3>
+
+                    <p>
+                        Personalize your workspace with custom colors, avatars, backgrounds, and themes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+
+        <section id="how-it-works" class="tq-section">
+            <div class="tq-section-heading">
+                <span class="tq-section-label">HOW IT WORKS</span>
+
+                <h2>Your quest starts here.</h2>
+                <p>
+                    From everyday tasks to meaningful rewards.
+                </p>
+
+            </div>
+
+            <div class="tq-steps-grid">
+
+                <!-- Step 1 -->
+                <article class="tq-step-card">
+                    <span class="tq-step-number">01</span>
+                    <div class="tq-step-icon">
+                        <i data-lucide="clipboard-list"></i>
+                    </div>
+
+                    <h3>Create Your Quest</h3>
+                    <p>
+                        Add daily tasks, set deadlines, and create recurring quests that fit your schedule.
+                    </p>
+
+                </article>
+
+                <!-- Step 2 -->
+                <article class="tq-step-card">
+
+                    <span class="tq-step-number">02</span>
+
+                    <div class="tq-step-icon">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+
+                    <h3>Track Game Events</h3>
+
+                    <p>
+                        Add your favorite games, configure event requirements, and track limited-time rewards.
+                    </p>
+
+                </article>
+
+                <!-- Step 3 -->
+                <article class="tq-step-card">
+
+                    <span class="tq-step-number">03</span>
+
+                    <div class="tq-step-icon">
+                        <i data-lucide="circle-check"></i>
+                    </div>
+
+                    <h3>Complete & Progress</h3>
+
+                    <p>
+                        Complete your quests, monitor your progress, and earn XP and Gold.
+                    </p>
+
+                </article>
+
+                <!-- Step 4 -->
+                <article class="tq-step-card">
+
+                    <span class="tq-step-number">04</span>
+
+                    <div class="tq-step-icon">
+                        <i data-lucide="gift"></i>
+                    </div>
+
+                    <h3>Claim Your Rewards</h3>
+
+                    <p>
+                        Unlock custom rewards, track game achievements, and celebrate your progress.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- GAME EVENT PREVIEW -->
+
+        <section id="game-event-preview" class="tq-section">
+
+            <div class="tq-section-heading">
+
+                <span class="tq-section-label">
+                    GAME EVENT TRACKING
+                </span>
+
+                <h2>Play smarter. Miss less.</h2>
+
+                <p>
+                    Track your limited-time events and know exactly what you need to unlock your rewards.
+                </p>
+
+            </div>
+
+            <article class="tq-event-demo">
+
+                <div class="tq-event-header">
+
+                    <div class="tq-feature-icon">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+
+                    <div>
+                        <h3>Limited-Time Login Event</h3>
+                        <p>14-day event · Interactive Demo</p>
+                    </div>
+
+                </div>
+
+                <div class="tq-event-progress-heading">
+
+                    <strong>Reward Progress</strong>
+
+                    <span id="demoProgressText">4 / 7 days</span>
+
+                </div>
+
+                <progress id="demoProgressBar" value="4" max="7" aria-label="Final reward progress">
+                </progress>
+
+                <!-- JavaScript generates the days -->
+
+                <div id="demoEventDays" class="tq-event-days">
+                </div>
+
+                <p class="tq-demo-hint">
+                    Click a day to change its status.
+                </p>
+
+                <div class="tq-event-stats">
+
+                    <div class="tq-event-stat">
+                        <span>Completed</span>
+                        <strong id="demoCompleted">4</strong>
+                    </div>
+
+                    <div class="tq-event-stat">
+                        <span>Missed</span>
+                        <strong id="demoMissed">2</strong>
+                    </div>
+
+                    <div class="tq-event-stat">
+                        <span>Remaining</span>
+                        <strong id="demoRemaining">8</strong>
+                    </div>
+
+                    <div class="tq-event-stat">
+                        <span>Earned Rewards</span>
+                        <strong id="demoEarned">240</strong>
+                    </div>
+
+                    <div class="tq-event-stat">
+                        <span>Missed Rewards</span>
+                        <strong id="demoLost">120</strong>
+                    </div>
+
+                    <div class="tq-event-stat">
+                        <span>Final Reward</span>
+                        <strong>1,600</strong>
+                    </div>
+
+                </div>
+
+                <p id="demoEventMessage" role="status"></p>
+
+                <button id="demoClaimButton" class="tq-claim-button" type="button" disabled>
+                    Final Reward Locked
+                </button>
+
+                <button id="demoResetButton" type="button">
+                    Reset Demo
+                </button>
+
+                <p class="tq-demo-hint">
+                    This demo does not grant actual in-game rewards.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>TaskQuest — Every task is a quest.</p>
+    </footer>
+
 </body>
+
 </html>
