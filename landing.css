@@ -1,0 +1,555 @@
+/* =========================================
+   1. HERO SECTION
+   ========================================= */
+
+.tq-preview-main {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.hero {
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 100px 32px;
+
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 68px);
+
+    letter-spacing: -2px;
+
+    margin: 24px 0;
+}
+
+.hero p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: var(--text-secondary);
+}
+
+.preview-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+/* =========================================
+   2. SHARED SECTION STYLES
+   ========================================= */
+
+.tq-section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 90px 32px;
+}
+
+.tq-section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+.tq-section-label {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tq-section-heading h2 {
+    margin: 20px 0 16px;
+
+    color: var(--text-primary);
+
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.tq-section-heading p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   3. FEATURES SECTION
+   ========================================= */
+
+.tq-features-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.tq-feature-card {
+    padding: 28px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s,
+        box-shadow 0.25s;
+}
+
+.tq-feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--accent-visible);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tq-feature-icon {
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+
+    border-radius: 12px;
+}
+
+.tq-feature-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.tq-feature-card h3 {
+    margin: 22px 0 12px;
+
+    font-size: 19px;
+    color: var(--text-primary);
+}
+
+.tq-feature-card p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================
+   4. HOW IT WORKS SECTION
+   ========================================= */
+
+.tq-steps-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.tq-step-card {
+    position: relative;
+
+    padding: 28px 24px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s;
+}
+
+.tq-step-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent-visible);
+}
+
+.tq-step-number {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: var(--accent-visible);
+}
+
+.tq-step-icon {
+    display: grid;
+    place-items: center;
+
+    width: 52px;
+    height: 52px;
+
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+
+    border-radius: 14px;
+}
+
+.tq-step-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.tq-step-card h3 {
+    margin: 24px 0 12px;
+
+    font-size: 18px;
+}
+
+.tq-step-card p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================
+   5. GAME EVENT PREVIEW
+   ========================================= */
+
+.tq-event-demo {
+    max-width: 800px;
+
+    margin: 0 auto;
+    padding: 32px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.tq-event-header {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.tq-event-header h3 {
+    margin: 0 0 6px;
+}
+
+.tq-event-header p {
+    margin: 0;
+
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.tq-event-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+#demoProgressBar {
+    width: 100%;
+    height: 12px;
+
+    accent-color: var(--accent-visible);
+}
+
+
+/* Event Days */
+
+.tq-event-days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.tq-event-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 64px;
+
+    padding: 10px 4px;
+
+    background: var(--background);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.tq-event-day:hover {
+    border-color: var(--accent-visible);
+}
+
+.tq-event-day.completed {
+    background: var(--accent);
+    color: #FFFFFF;
+
+    border-color: var(--accent);
+}
+
+.tq-event-day.missed {
+    background: #FDE8E8;
+    color: #B91C1C;
+
+    border-color: #FCA5A5;
+}
+
+.tq-event-day-symbol {
+    margin-top: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Event Statistics */
+
+.tq-event-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin: 24px 0;
+}
+
+.tq-event-stat {
+    padding: 16px;
+
+    background: var(--background);
+
+    border-radius: 12px;
+}
+
+.tq-event-stat span {
+    display: block;
+
+    font-size: 13px;
+
+    color: var(--text-secondary);
+}
+
+.tq-event-stat strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 24px;
+}
+
+#demoCompleted,
+#demoEarned {
+    color: var(--accent-visible);
+}
+
+#demoMissed,
+#demoLost {
+    color: #EF4444;
+}
+
+
+/* Event Messages and Buttons */
+
+#demoEventMessage {
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+.tq-claim-button {
+    width: 100%;
+
+    margin: 8px 0 12px;
+    padding: 14px;
+
+    background: var(--accent);
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+.tq-claim-button:hover:not(:disabled) {
+    background: var(--accent-hover);
+}
+
+.tq-claim-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#demoResetButton {
+    width: 100%;
+}
+
+.tq-demo-hint {
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================
+   6. RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .tq-features-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .tq-steps-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .tq-section {
+        padding: 60px 20px;
+    }
+
+    .tq-section-heading {
+        margin-bottom: 32px;
+    }
+
+    .tq-features-grid,
+    .tq-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .tq-feature-card {
+        padding: 24px;
+    }
+
+    .tq-event-demo {
+        padding: 18px;
+    }
+
+    .tq-event-days {
+        gap: 5px;
+    }
+
+    .tq-event-day {
+        min-height: 48px;
+
+        font-size: 11px;
+        padding: 8px 2px;
+    }
+
+    .tq-event-day-symbol {
+        font-size: 16px;
+    }
+
+    .tq-event-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tq-feature-card:hover,
+    .tq-step-card:hover {
+        transform: none;
+    }
+
+}
