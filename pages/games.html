@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Library | TaskQuest</title>
+
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <link rel="stylesheet" href="../css/games.css">
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+    <script src="../js/mymain.js" defer></script>
+    <script src="../js/games.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a class="brand" href="../index.html">
+
+            <span class="logo" aria-hidden="true">✓</span>
+
+            <span>TaskQuest</span>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../index.html#features">
+                Features
+            </a>
+
+            <a href="../index.html#how-it-works">
+                How It Works
+            </a>
+
+        </nav>
+
+        <button id="themeToggle" type="button">
+            Theme: System
+        </button>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="gl-main">
+
+        <p class="gl-breadcrumb">
+            Workspace / Games
+        </p>
+
+        <!-- PAGE HEADING -->
+
+        <div class="gl-heading">
+
+            <div>
+
+                <h1>Game Library</h1>
+
+                <p>Your games. Your adventures.</p>
+
+            </div>
+
+            <button id="addGameButton" class="gl-primary" type="button">
+
+                <i data-lucide="plus"></i>
+
+                Add Game
+
+            </button>
+
+        </div>
+
+        <!-- STATISTICS -->
+
+        <section class="gl-stats">
+
+            <article class="gl-stat">
+
+                <span>Total Games</span>
+
+                <strong id="totalGames">0</strong>
+
+            </article>
+
+            <article class="gl-stat">
+
+                <span>Active Events</span>
+
+                <strong>—</strong>
+
+            </article>
+
+            <article class="gl-stat">
+
+                <span>Favorite Games</span>
+
+                <strong id="favoriteGames">0</strong>
+
+            </article>
+
+        </section>
+
+        <!-- SEARCH AND FILTER -->
+
+        <div class="gl-toolbar">
+
+            <div class="gl-search">
+
+                <i data-lucide="search"></i>
+
+                <input type="search" id="searchGames" placeholder="Search games..." aria-label="Search games">
+
+            </div>
+
+            <select id="filterGames" aria-label="Filter games">
+
+                <option value="all">All Games</option>
+
+                <option value="favorites">
+                    Favorites
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- GAME CARDS -->
+
+        <section id="gameGrid" class="gl-grid" aria-label="Game library">
+
+        </section>
+
+        <p id="gameStatus" class="gl-status" role="status">
+        </p>
+
+    </main>
+
+    <!-- ADD / EDIT GAME DIALOG -->
+
+    <dialog id="gameDialog" class="gl-dialog">
+
+        <div class="gl-dialog-heading">
+
+            <h2 id="dialogTitle">Add Game</h2>
+
+            <button id="closeGameDialog" type="button" aria-label="Close dialog">
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+        <form id="gameForm">
+
+            <input type="hidden" id="gameId">
+
+            <!-- GAME COVER -->
+
+            <div class="gl-upload">
+
+                <img id="coverPreview" alt="Game cover preview" hidden>
+
+                <label for="gameCover">
+                    Game Cover
+                </label>
+
+                <input type="file" id="gameCover" accept="image/png,image/jpeg,image/webp">
+
+                <small>
+                    PNG, JPEG or WEBP. Maximum 2 MB.
+                </small>
+
+                <button id="removeCover" type="button">
+                    Remove Cover
+                </button>
+
+            </div>
+
+            <!-- GAME INFORMATION -->
+
+            <div class="gl-form-grid">
+
+                <div class="gl-field">
+
+                    <label for="gameName">
+                        Game Name *
+                    </label>
+
+                    <input type="text" id="gameName" maxlength="80" placeholder="Enter game name" required>
+
+                </div>
+
+                <div class="gl-field">
+
+                    <label for="gameServer">
+                        Server
+                    </label>
+
+                    <input type="text" id="gameServer" maxlength="60" placeholder="America, Asia...">
+
+                </div>
+
+                <div class="gl-field">
+
+                    <label for="gameCurrency">
+                        Game Currency
+                    </label>
+
+                    <input type="text" id="gameCurrency" maxlength="60" placeholder="Primogems, Gold...">
+
+                </div>
+
+                <div class="gl-field">
+
+                    <label for="gameTimezone">
+                        Time Zone
+                    </label>
+
+                    <select id="gameTimezone">
+
+                        <option value="UTC">
+                            UTC
+                        </option>
+
+                        <option value="UTC-05:00">
+                            UTC-05:00
+                        </option>
+
+                        <option value="UTC-04:00">
+                            UTC-04:00
+                        </option>
+
+                        <option value="UTC+08:00">
+                            UTC+08:00
+                        </option>
+
+                        <option value="UTC+09:00">
+                            UTC+09:00
+                        </option>
+
+                        <option value="America/New_York">
+                            New York
+                        </option>
+
+                        <option value="America/Los_Angeles">
+                            Los Angeles
+                        </option>
+
+                        <option value="Asia/Beijing">
+                            Beijing
+                        </option>
+
+                        <option value="Asia/Tokyo">
+                            Tokyo
+                        </option>
+
+                        <option value="Europe/London">
+                            London
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="gl-field">
+
+                    <label for="dailyReset">
+                        Daily Reset Time
+                    </label>
+
+                    <input type="time" id="dailyReset" value="04:00" required>
+
+                </div>
+
+                <div class="gl-field">
+
+                    <label for="weeklyReset">
+                        Weekly Reset Day
+                    </label>
+
+                    <select id="weeklyReset">
+
+                        <option>Monday</option>
+                        <option>Tuesday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                        <option>Friday</option>
+                        <option>Saturday</option>
+                        <option>Sunday</option>
+
+                    </select>
+
+                </div>
+
+                <div class="gl-field">
+
+                    <label for="gameColor">
+                        Game Theme Color
+                    </label>
+
+                    <input type="color" id="gameColor" value="#384C65">
+
+                </div>
+
+            </div>
+
+            <!-- NOTES -->
+
+            <div class="gl-field">
+
+                <label for="gameNotes">
+                    Notes
+                </label>
+
+                <textarea id="gameNotes" rows="4" maxlength="500" placeholder="Additional information..."></textarea>
+
+            </div>
+
+            <!-- FAVORITE -->
+
+            <label class="gl-checkbox">
+
+                <input type="checkbox" id="gameFavorite">
+
+                Add to favorites
+
+            </label>
+
+            <p id="formMessage" class="gl-form-message" role="alert">
+            </p>
+
+            <!-- FORM BUTTONS -->
+
+            <div class="gl-form-actions">
+
+                <button id="cancelGameButton" type="button">
+
+                    Cancel
+
+                </button>
+
+                <button id="saveGameButton" class="gl-primary" type="submit">
+
+                    Save Game
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>TaskQuest — Every task is a quest.</p>
+
+    </footer>
+
+</body>
+
+</html>
